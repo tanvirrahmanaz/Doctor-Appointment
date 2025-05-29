@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 import Home from './pages/Home.jsx'
-import Bookings from './pages/Bookings.jsx'
+import Bookings from './pages/MyAppointments.jsx'
 import Blogs from './pages/Blogs.jsx'
 import DoctorDetails from './pages/DoctorDetails.jsx'
 import ErrorPage from './pages/ErrorPage.jsx'
@@ -23,10 +23,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />
       },
-      {
-        path: "/bookings",
-        element: <Bookings />
-      },
+    
       {
         path: "/my-bookings",
         element: <Bookings />
