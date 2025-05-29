@@ -33,8 +33,13 @@ const router = createBrowserRouter([
         element: <Blogs />
       },
       {
+      
         path: "/doctors/:id",
         element: <DoctorDetails />
+      },
+      {
+        path: "/blog",
+        element: <Blogs />
       }
     ],
   },

@@ -109,18 +109,13 @@ const MyAppointments = () => {
       {/* Appointments List */}
       <section className="space-y-6">
         {appointments.map((appointment) => (
-          console.log(appointment),
           <div
             key={appointment.id}
             className="flex flex-col md:flex-row md:justify-between md:items-center bg-white rounded-xl shadow p-6"
           >
             <div className="mb-4 md:mb-0">
-              <h4 className="text-xl font-semibold text-black">
-                Name: {appointment.doctorName}
-              </h4>
-              <h4 className="text-xl font-semibold text-black">
-                Speciality: {appointment.doctorSpeciality}
-              </h4>
+              <h4 className="text-xl font-semibold text-black">Name: {appointment.doctorName || appointment.name}</h4>
+              <h4 className="text-xl font-semibold text-black">Speciality: {appointment.doctorSpeciality || appointment.speciality}</h4>
               <p className="text-gray-600">{appointment.speciality}</p>
               <p className="text-lg font-semibold mt-1 text-black">Fee: Taka {appointment.fee}</p>
             </div>
@@ -132,7 +127,6 @@ const MyAppointments = () => {
             </button>
           </div>
         ))}
-
       </section>
     </div>
   )
